@@ -21,6 +21,9 @@ public class RegexMethod {
 
         Pattern patternDate1 = Pattern.compile("(senin|selasa|rabu|kamis|jumat|sabtu|minggu),\s(januari|februari|maret|april|mei|juni|juli|agustus|oktober|november|desember)\s([0-9]{2})$", Pattern.CASE_INSENSITIVE);
         Matcher matcherDate1 = patternDate1.matcher(kata);
+
+        Pattern patternDate2 = Pattern.compile("(0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[0-2])-\\d{4}$");
+        Matcher matcherDate2 = patternDate2.matcher(kata);
     
         if(matcherEmail.find()) {
             System.out.println("String bertipe email");
@@ -28,6 +31,8 @@ public class RegexMethod {
             System.out.println("String bertipe IP");
         }else if(matcherDate1.find()){
             System.out.println("String bertipe Tanggal (dddd, MMMM yy)");
+        }else if(matcherDate2.find()){
+            System.out.println("String bertipe Tanggal (dd-MM-yyyy)");
         }else{
             System.out.println("String bukan bagian dari pola");
         }
