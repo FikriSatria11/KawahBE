@@ -2,10 +2,12 @@ public class Lingkaran {
     public float radius;
 
     public void luas(){
-        System.out.println(3.14*radius*radius);
+        float luas = (float)(Math.PI*radius*radius);
+        System.out.printf("Luas Lingkaran = %.2f \n",luas);
     }
 
     public void keliling(){
-        System.out.println(2*3.14*radius);        
+        float keliling = (float)(2*Math.PI*radius);
+        System.out.printf("Keliling Lingkaran = %.2f \n",keliling);
     }
 }

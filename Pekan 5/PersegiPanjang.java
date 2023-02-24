@@ -3,11 +3,13 @@ public class PersegiPanjang {
     public int lebar;
 
     public void luas(){
-        System.out.println(panjang*lebar);
+        int luas = panjang*lebar;
+        System.out.println("Luas Persegi Panjang = "+luas);
     }
     
     public void keliling(){
-        System.out.println((2*panjang)+(2*lebar));
+        int keliling = (2*panjang)+(2*lebar);
+        System.out.println("Keliling Persegi Panjang = "+keliling);
     }
 
 }
